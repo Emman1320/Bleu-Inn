@@ -925,7 +925,6 @@ footer .contact-bottom-border {
 }
 /* footer ends  */
 
-
 @media (max-width: 1370px) {
   .logo span {
     font-size: 18px;
@@ -960,6 +959,9 @@ footer .contact-bottom-border {
   .input-border {
     height: 1.2px;
   }
+  .about-header {
+    left: 20px;
+  }
 }
 @media (min-width: 1900px) {
   .form form {
@@ -976,7 +978,7 @@ footer .contact-bottom-border {
   .car-timer-text {
     top: 9.4em;
   }
-  .logo span{
+  .logo span {
     font-size: 24px;
     top: 95px;
   }
