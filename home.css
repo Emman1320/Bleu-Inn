@@ -125,6 +125,9 @@ body {
   .form {
     padding-top: 2em;
   }
+  .car-container {
+    zoom: 0.94;
+  }
 }
 .top-bar {
   height: 8vh;
@@ -435,6 +438,11 @@ body {
   width: 40em;
   /* top: -31vh; */
 }
+.car-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .car-container:hover .cls-2 {
   stroke-dashoffset: 0;
 }
@@ -566,11 +574,44 @@ li {
   height: 100%;
   scroll-snap-align: center;
 }
-
+.circle {
+  transform: rotate(-90deg) scaleY(1);
+  fill: transparent;
+  stroke: goldenrod;
+}
+.circle circle {
+  stroke-dasharray: 1256;
+  fill: #e5c06317;
+  animation: circle 4s 3s ease-in-out alternate infinite;
+}
+.car-timer {
+  width: 33.5%;
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.car-timer-text {
+  text-align: center;
+  position: relative;
+  font-size: 2em;
+  font-family: "Great Vibes", cursive;
+  top: 9em;
+  width: 80%;
+}
+@keyframes circle {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 1256;
+  }
+}
 @media (hover: hover) {
   .carousel__snapper {
     animation-name: tonext, snap;
-    animation-timing-function: ease;
+    animation-timing-function: ease-in-out;
     animation-duration: 4s;
     animation-iteration-count: infinite;
   }
@@ -722,7 +763,6 @@ li::before {
   background-repeat: no-repeat;
   display: flex;
   justify-content: flex-end;
-  /* margin-bottom: 2em ; */
   background-image: url("./images/nature3.jpg");
 }
 .donate-header {
