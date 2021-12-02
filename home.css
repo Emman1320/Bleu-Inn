@@ -925,6 +925,7 @@ footer .contact-bottom-border {
 }
 /* footer ends  */
 
+
 @media (max-width: 1370px) {
   .logo span {
     font-size: 18px;
@@ -940,7 +941,7 @@ footer .contact-bottom-border {
     zoom: 0.96;
   }
   .donate-header div {
-    font-size: 3.7em;
+    font-size: 3.4em;
   }
   .input label {
     font-size: 1.4em;
@@ -951,6 +952,10 @@ footer .contact-bottom-border {
   }
   .donate {
     height: 90vh;
+  }
+  .donate-header {
+    width: 22em;
+    height: 14em;
   }
   .input-border {
     height: 1.2px;
