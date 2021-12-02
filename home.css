@@ -752,6 +752,7 @@ li::before {
   display: flex;
   justify-content: flex-end;
   background-image: url("./images/nature3.jpg");
+  margin-bottom: 2em;
 }
 .donate-header {
   width: 26em;
