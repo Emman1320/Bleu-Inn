@@ -117,6 +117,23 @@ body {
 .active {
   color: #c4a159;
 }
+
+@media (max-width: 1370px) {
+  .logo span {
+    font-size: 15px;
+    top: 66px;
+  }
+  .form {
+    padding-top: 2em;
+  }
+  .car-container {
+    zoom: 0.94;
+  }
+  .about-container {
+    zoom:0.96;
+  }
+}
+
 .top-bar {
   height: 8vh;
   display: flex;
