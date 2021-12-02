@@ -903,9 +903,10 @@ footer {
   padding-top: 5vh;
   padding-right: 5vw;
 }
-footer h1 {
+.contact-header {
   padding: 1px;
   text-decoration: underline;
+  font-size: 2em;
   color: #c4a159;
   font-family: "EB Garamond", serif;
 }
@@ -936,5 +937,21 @@ footer .contact-bottom-border {
   }
   .about-container {
     zoom: 0.96;
+  }
+  .donate-header div {
+    font-size: 3.7em;
+  }
+  .input label {
+    font-size: 1.4em;
+  }
+  .car-timer-text {
+    font-size: 1.9em;
+    top: 9.5em;
+  }
+  .donate {
+    height: 90vh;
+  }
+  .input-border {
+    height: 1.2px;
   }
 }
