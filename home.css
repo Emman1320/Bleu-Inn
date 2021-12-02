@@ -128,6 +128,9 @@ body {
   .car-container {
     zoom: 0.94;
   }
+  .about-container {
+    zoom:0.96;
+  }
 }
 .top-bar {
   height: 8vh;
