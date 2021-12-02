@@ -956,3 +956,23 @@ footer .contact-bottom-border {
     height: 1.2px;
   }
 }
+@media (min-width: 1900px) {
+  .form form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .form {
+    height: 90%;
+  }
+  .car-timer {
+    width: 32%;
+  }
+  .car-timer-text {
+    top: 9.4em;
+  }
+  .logo span{
+    font-size: 24px;
+    top: 95px;
+  }
+}
