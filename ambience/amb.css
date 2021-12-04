@@ -1,0 +1,640 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Red+Hat+Display:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gwendolyn:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent; /* thumb and track color */
+  scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+::marker {
+  color: transparent;
+}
+
+input:focus {
+  border: 0;
+  outline: transparent;
+}
+body {
+  margin: 0;
+  font-family: "Eb Garamond ", sans-serif;
+  animation: nav-item 0.3s 0.1s cubic-bezier(0.575, 0.005, 0.285, 1.005)
+    forwards;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+
+/* navbar starts */
+.side-bar {
+  width: 15%;
+}
+.logo {
+  text-align: center;
+}
+.logo span {
+  width: 100%;
+  font-family: "Great Vibes", cursive;
+  font-size: 20px;
+  position: relative;
+  top: 76px;
+  z-index: 100;
+  animation: logo 1s 0.6s cubic-bezier(0.575, 0.005, 0.285, 1.005) forwards;
+  color: white;
+}
+
+.logo > img {
+  margin: auto;
+  width: 90%;
+  opacity: 0;
+  animation: logo 1s 0.6s cubic-bezier(0.575, 0.005, 0.285, 1.005) forwards;
+  height: auto;
+  display: flex;
+}
+
+.main {
+  overflow: scroll;
+  width: 85%;
+}
+
+.nav-items {
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  align-items: center;
+  animation: nav-item 1s 0.9s cubic-bezier(0.575, 0.005, 0.285, 1.005) forwards;
+  margin-top: 3em;
+}
+
+.nav-item,
+.nav-item a:link,
+.nav-item a:visited {
+  padding: 9px 0 9px 0;
+  color: black;
+  text-align: center;
+  width: 100%;
+  font-family: "EB Garamond", serif;
+  transition: background-color ease-in-out 0.1s;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  background-color: #d0d0d052;
+}
+
+.nav-item:hover + .hr {
+  width: 4em;
+}
+
+.hr {
+  width: 2em;
+  background-color: #c4a159;
+  height: 0.8px;
+  animation: nav-item-hr 1s 0.9s cubic-bezier(0.575, 0.005, 0.285, 1.005)
+    forwards;
+  transition: width cubic-bezier(0.575, 0.005, 0.285, 1.005) 0.4s;
+}
+
+.active {
+  color: #c4a159;
+}
+.top-bar {
+  height: 8vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+
+.contact {
+  font-size: 15px;
+  padding-top: 5px;
+  font-family: "Red Hat Display", sans-serif;
+}
+.contact span {
+  padding-bottom: 5px;
+}
+.contact-bottom-border {
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  transition: all cubic-bezier(0.575, 0.005, 0.285, 1.005) 0.7s;
+  margin-top: 1px;
+  background-color: #c4a159;
+}
+.contact:hover .contact-bottom-border {
+  transform: scaleX(1);
+}
+/* book now button */
+.booknow-button {
+  border: 0px solid black;
+  background: white;
+  padding: 7px 18px;
+  margin-left: 20px;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 14px;
+}
+
+.button-overlay {
+  position: absolute;
+  margin-left: 20px;
+  display: flex;
+  background-color: transparent;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 116px;
+  height: 33px;
+}
+.border-top-bottom {
+  /*width should become 0 on hover*/
+  background-color: black;
+  transition: width 750ms cubic-bezier(0.575, 0.005, 0.285, 1.005),
+    opacity 750ms cubic-bezier(0.575, 0.005, 0.285, 1.005);
+  width: 100%;
+  height: 0.7px;
+}
+.booknow-button-border-middle {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.booknow-button-border-middle > div {
+  /*height should become 0 on hover*/
+  height: 100%;
+  transition: height 750ms cubic-bezier(0.575, 0.005, 0.285, 1.005),
+    opacity 750ms cubic-bezier(0.575, 0.005, 0.285, 1.005);
+  width: 1px;
+  background-color: black;
+}
+.booknow-button-right-bar {
+  width: 0.7px !important;
+}
+.booknow-button-left-bar {
+  align-self: flex-end;
+}
+.booknow-button-bottom-bar {
+  align-self: flex-end;
+}
+.button-overlay:hover .booknow-button-border-middle > div {
+  height: 0;
+}
+.button-overlay:hover .border-top-bottom {
+  width: 0;
+}
+
+@keyframes nav-item {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes nav-item-hr {
+  0% {
+    transform: scaleX(3);
+  }
+  100% {
+    transform: scaleX(0.7);
+  }
+}
+@keyframes nav-item-hr-hover {
+  0% {
+    width: 2em;
+  }
+  100% {
+    width: 4em;
+  }
+}
+@keyframes side-bar {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes logo {
+  0% {
+    opacity: 0%;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+/* navbar ends  */
+
+/* main  page*/
+.main::-webkit-scrollbar {
+  height: 2px;
+  width: 5px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: transparent;
+  width: 3px;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: rgba(85, 85, 85, 0.767);
+}
+
+.main::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* about */
+
+.about-header {
+  font-family: "Nanum Myeongjo", Arial;
+  position: relative;
+  bottom: -8vh;
+  opacity: 0.4;
+  transition: all 0.7s cubic-bezier(0.18, 0.9, 0.24, 0.91);
+  color: #c4a159;
+  font-size: 6.7em;
+}
+
+.about-container:hover .about-header {
+  letter-spacing: 0.2em;
+}
+.about-container {
+  margin-top: 6em;
+}
+
+#left {
+  width: 37em;
+  position: relative;
+  opacity: 0.3;
+}
+.left {
+  margin-bottom: -12.5em;
+  margin-left: -6.7em;
+}
+.cls-1 {
+  fill: transparent;
+  stroke: rgba(0, 0, 0, 0.39);
+  stroke-width: 0.5px;
+  stroke-dashoffset: 430;
+  stroke-dasharray: 430;
+  transition: stroke-dashoffset ease-in-out 2s;
+}
+.about-container:hover .cls-1 {
+  stroke-dashoffset: 0;
+}
+/* about ends  */
+/* carousel starts*/
+/* left svg anim  */
+
+.overlapping-text-welcome {
+  text-align: center;
+  animation: logo 1s 0.6s cubic-bezier(0.575, 0.005, 0.285, 1.005);
+  color: black;
+  font-family: "Playball", cursive;
+  margin-top: 4.4em;
+}
+.overlapping-text-welcome {
+  font-size: 6.7em;
+  opacity: 0.6;
+  transition: all 0.7s cubic-bezier(0.18, 0.9, 0.24, 0.91);
+  margin-bottom: 0vw;
+  font-family: "Nanum Myeongjo", serif;
+  z-index: 1;
+  color: #c4a159;
+}
+
+/* footer starts  */
+footer {
+  text-align: center;
+  background: #222f34;
+  padding-bottom: 5vh;
+  padding-left: 5vw;
+  padding-top: 5vh;
+  padding-right: 5vw;
+}
+.contact-header {
+  padding: 1px;
+  text-decoration: underline;
+  font-size: 2em;
+  color: #c4a159;
+  font-family: "EB Garamond", serif;
+}
+footer .contact-bottom-border {
+  height: 1px;
+}
+
+.contact a {
+  color: white;
+  text-decoration: none;
+}
+.contact div {
+  color: white;
+  /* margin-bottom: 1.5vh; */
+}
+/* footer ends  */
+
+@media (max-width: 1370px) {
+  .logo span {
+    font-size: 18px;
+    top: 68px;
+  }
+  .about-container {
+    zoom: 0.96;
+  }
+}
+@media (min-width: 1900px) {
+  .logo span {
+    font-size: 24px;
+    top: 95px;
+  }
+}
+.about-container {
+  margin-top: 0;
+}
+.main {
+  overflow-x: hidden;
+}
+.r {
+  font-family: "Great Vibes", cursive;
+}
+.c1 {
+  float: left;
+  width: 39vw;
+  margin: 0;
+  padding-top: 20vh;
+  padding-left: 10vh;
+  font-size: 3em;
+  z-index: -3;
+  color: #c4a159;
+}
+.c2 {
+  float: right;
+  z-index: -3;
+  padding-top: 25vh;
+  padding-right: 4vw;
+  padding-left: 10vw;
+  padding-bottom: 5vh;
+  width: 45vw;
+  color: white;
+  font-family: "Great Vibes", cursive;
+  font-size: 1.5em;
+  background-color: #48abc1;
+  text-align: right;
+  margin: 0;
+}
+.c3 img {
+  margin-right: 40vw;
+  margin-top: -50vh;
+  z-index: 5;
+  width: 50vw;
+  height: 70vh;
+}
+.rtop {
+  padding-top: 5vh;
+  padding-left: 5vw;
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  margin-top: 5vh;
+  margin-bottom: -5vh;
+  z-index: -1;
+}
+
+.sup-side-bar {
+  height: 73px;
+  width: 3px;
+  background: #c4a159;
+  align-self: flex-end;
+  margin-left: 0.4em;
+  transition: all cubic-bezier(0, 0, 0.12, 1.03) 1s;
+}
+.sup-bottom-bar {
+  width: 3px;
+  height: 3px;
+  align-self: flex-end;
+  background: #c4a159;
+  transition: all cubic-bezier(0, 0, 0.12, 1.03) 1s;
+}
+.r:hover .sup {
+  right: 13vw;
+}
+.r:hover .sup-side-bar {
+  height: 40px;
+}
+.r:hover .sup-bottom-bar {
+  width: 100%;
+}
+
+.sup {
+  color: #181818;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  top: 35vh;
+  right: 15vw;
+  font-size: 2em;
+  font-weight: 10px;
+  letter-spacing: 0.1vw;
+  transition: all cubic-bezier(0, 0, 0.12, 1.03) 1s;
+}
+.carousel__viewport {
+  left: -52vw;
+}
+
+.carousel__slide:nth-child(1) {
+  background: url("images/bg12.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.carousel__slide:nth-child(2) {
+  background: url("images/bg20.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.carousel__slide:nth-child(3) {
+  background: url("images/bg21.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.carousel__slide:nth-child(4) {
+  background: url("images/bg22.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.car {
+  margin-bottom: 20vh;
+}
+.i {
+  width: 30vw;
+  height: 50vh;
+  float: left;
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  font-family: "Gwendolyn", cursive;
+  color: #c4a159;
+  font-size: 4em;
+}
+.i:nth-child(even) {
+  float: right;
+}
+.tbg {
+  content: "";
+  background: url("images/bg17.jpg");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  left: 0px;
+  opacity: 0.7;
+}
+footer {
+  clear: both;
+}
+.gallery {
+  position: relative;
+}
+.i1 {
+  background: url("images/bg31.jpg");
+  background-size: cover;
+}
+.i2 {
+  background: url("images/bg29.jpg");
+  background-size: cover;
+}
+.i3 {
+  background: url("images/bg25.jpg");
+  background-size: cover;
+}
+.i4 {
+  background: url("images/bg30.jpg");
+  background-size: cover;
+}
+.i5 {
+  background: url("images/bg27.jpg");
+  background-size: cover;
+}
+.i6 {
+  background: url("images/bg28.jpg_fit=scale");
+  background-size: cover;
+}
+
+.l {
+  margin-top: -8vh;
+  margin-left: 2vw;
+  opacity: 0.7;
+}
+
+.ri {
+  text-align: right;
+  margin-top: -8vh;
+  margin-right: 2vw;
+  opacity: 0.7;
+}
+
+.suites .s {
+  width: 22vw;
+  height: 40vh;
+  font-size: 2em;
+  font-weight: bolder;
+  padding-top: 2vh;
+
+  padding-left: 2vw;
+  color: #000000b3;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+    rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+.b {
+  height: 50vh;
+  background-color: #48abc1;
+  float: left;
+  width: 22vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  font-family: "Great Vibes", cursive;
+}
+.b {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 25px -12px;
+  transition: transform 1s cubic-bezier(0, 0, 0.12, 1.03) 0s;
+  transform: perspective(3000px) rotateY(5deg);
+}
+.suit-side-bar {
+  height: 39px;
+  width: 3px;
+  background: white;
+  align-self: flex-end;
+  margin-right: 0.4em;
+  transition: all cubic-bezier(0, 0, 0.12, 1.03) 1s;
+}
+.suit-bottom-bar {
+  width: 10%;
+  height: 3px;
+  align-self: flex-end;
+  background: white;
+  transition: all cubic-bezier(0, 0, 0.12, 1.03) 1s;
+}
+.b:hover {
+  transform: perspective(1500px) rotateY(9deg);
+}
+.b:hover .suit-side-bar {
+  height: 20px;
+}
+.b:hover .suit-bottom-bar {
+  width: 40%;
+}
+.verna {
+  background-image: url("images/bg33.jpeg");
+  background-size: cover;
+}
+.camelia {
+  background-image: url("images/bg33.jpg");
+  background-size: cover;
+}
+.grandtour {
+  background-image: url("images/bg32.png");
+  background-size: cover;
+}
+@media (min-width: 1400px) {
+  .c1 {
+    padding-top: 14vh;
+  }
+}
