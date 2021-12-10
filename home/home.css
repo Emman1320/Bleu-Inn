@@ -757,7 +757,7 @@ li::before {
   background-repeat: no-repeat;
   display: flex;
   justify-content: flex-end;
-  background-image: url("./images/nature3.jpg");
+  background-image: url("../images/nature3.jpg");
   margin-bottom: 2em;
 }
 .donate-header {
@@ -865,15 +865,6 @@ input:focus ~ label {
   background-color: #000000a1;
   width: 0%;
   transition: width cubic-bezier(0.575, 0.005, 0.285, 1.005) 0.5s;
-}
-.card-number.input label {
-  width: 6.5em;
-}
-.card-number.input {
-  margin-top: 4em;
-}
-.card-number.input .input-box {
-  width: 77%;
 }
 .pay-now-button {
   display: flex;

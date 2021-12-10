@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nanum+Myeongjo&display=swap");
+.tbg1 {
+  background: url("../images/events-hero.jpg");
+  background-size: cover;
+  color: white;
+  font-family: "Red Hat Display";
+  /* -webkit-mask-image: linear-gradient(0deg, #000 40%, transparent); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  height: 90vh;
+  font-size: 3em;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 30vh;
+}
+.events-header-border {
+  background: white;
+  height: 2px;
+  animation: opening-animation-border 1s ease forwards;
+  width: 35%;
+}
+.events-header {
+  position: relative;
+  opacity: 0;
+  animation: opening-animation 1s 0.6s ease forwards;
+  top: 8vh;
+}
+@keyframes opening-animation {
+  0% {
+    top: 8vh;
+    opacity: 0;
+  }
+  100% {
+    top: 0vh;
+    opacity: 1;
+  }
+}
+@keyframes opening-animation-border {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 35%;
+  }
+}
+.nav-items {
+  font-style: italic;
+}
+
+.enen {
+  background: #eeeeee;
+  padding-top: 14vh;
+}
+.enclosing {
+  color: rgb(57, 57, 58);
+  font-size: 1.7em;
+
+  padding-top: 15vh;
+  padding-left: 5vw;
+  padding-bottom: 41vh;
+  padding-right: 5vw;
+  text-align: right;
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+}
+
+.c3 img {
+  margin-top: -84vh;
+  margin-left: 17vh;
+  margin-bottom: 15vh;
+  width: 42vw;
+}
+.latest-block {
+  display: flex;
+  height: 85vh;
+  /* opacity: 0.8; */
+  align-items: center;
+  /* background: url("https://www.bellevue.it/style/images/index/reviewsBack.jpg"); */
+}
+.latest-block-desc {
+  font-size: 2em;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  letter-spacing: 0.2vw;
+  width: 70%;
+  background-repeat: no-repeat;
+  background-size: 26em;
+  background-image: url("https://images.pexels.com/photos/4551127/pexels-photo-4551127.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+.latest-block {
+  position: relative;
+  margin-bottom: 5em;
+}
+/* #Layer_3 {
+  margin-bottom: -1.8em;
+  opacity: 0.3;
+}
+.cls-1 {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 0.8px;
+  stroke-dasharray: 969;
+  stroke-dashoffset: 969;
+  transition: all 2s ease-in-out ;
+} */
+.latest-block:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  background-image: url("https://www.bellevue.it/style/images/index/reviewsBack.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+.latest-header {
+  z-index: 1;
+}
+.latest-header div {
+  font-size: 5em;
+  transform: rotate(-90deg);
+  font-family: "EB Garamond", serif;
+  color: rgb(57, 57, 58);
+}
+.latest-block-desc div {
+  color: rgb(57, 57, 58);
+  text-align: right;
+  padding: 1em 1em;
+  width: 78%;
+  background: white;
+  font-family: "EB Garamond", serif;
+}
+.latest-block-desc h1 {
+  font-size: 1.3em;
+  margin-top: 0;
+}
+.recents {
+  color: rgb(57, 57, 58);
+  font-size: 5.5em;
+  letter-spacing: 0.4vw;
+  font-family: "EB Garamond", serif;
+  padding-bottom: 5vh;
+  text-align: center;
+  transition: letter-spacing 0.7s cubic-bezier(0.18, 0.9, 0.24, 0.91);
+  display: flex;
+  justify-content: center;
+  font-style: normal;
+}
+
+.recents-header-border {
+  background-color: rgb(57, 57, 58);
+  height: 3px;
+  margin: auto;
+  border-radius: 20%;
+  transition: all cubic-bezier(0.08, 0.78, 0.24, 1.01) 1.3s;
+  width: 0%;
+}
+
+.recents-container:hover .recents {
+  letter-spacing: 1vw;
+}
+.recents-container:hover .recents-header-border {
+  width: 98%;
+}
+
+.carousel__slide:nth-child(4),
+.carousel__slide:nth-child(3),
+.carousel__slide:nth-child(2),
+.carousel__slide:nth-child(1) {
+  background: none;
+}
+.carousel__viewport {
+  left: -58vw;
+  margin-right: -3vw;
+}
+.b-img {
+  background: url("https://www.bellevue.it/style/images/index/reviewsBack.jpg");
+}
+.tbg {
+  opacity: 0.8;
+}
+.rtop {
+  margin-left: 0;
+  /* display: flex; */
+  height: 90vh;
+  padding-top: 0;
+}
+.r1 {
+  margin-bottom: 15vh;
+}
+.car {
+  margin-bottom: 0;
+}
+.sup {
+  background: white;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  color: rgb(57, 57, 58);
+  top: 22vh;
+  right: 32vw;
+  width: 366vw;
+  font-family: "EB Garamond", serif;
+}
+
+.latest {
+  transform: rotate(-90deg);
+  font-size: 5em;
+  font-family: "EB Garamond", serif;
+  margin-left: 46vw;
+  color: rgb(57, 57, 58);
+}
+.sup h1 {
+  font-size: 1.3em;
+
+  font-family: "EB Garamond", serif;
+}
+.donate {
+  background: url("../images/bg54.jpeg");
+  background: cover;
+  height: 92vh;
+  padding-top: 10vh;
+  margin-top: 4em;
+}
+.form {
+  width: 52%;
+  margin-right: -3vw;
+  background: whitesmoke;
+}
+
+.input-box input {
+  background: whitesmoke;
+}
+
+.input-border {
+  background: #000000a1;
+  height: 1.6px;
+}
+.input-border div {
+  height: 1.6px;
+  background-color: black;
+}
+
+.input,
+input {
+  font-style: italic;
+  color: black;
+}
+.form {
+  height: 91%;
+  display: flex;
+  flex-direction: column;
+  padding: 3em 3em 2em 3em;
+}
+button {
+  background: white !important;
+}
+.contact-header {
+  font-style: italic;
+}
+.pay-now-button button {
+  font-style: italic;
+}

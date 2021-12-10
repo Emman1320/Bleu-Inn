@@ -472,22 +472,22 @@ footer .contact-bottom-border {
 }
 
 .carousel__slide:nth-child(1) {
-  background: url("images/bg12.jpg");
+  background: url("../images/bg12.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .carousel__slide:nth-child(2) {
-  background: url("images/bg20.jpg");
+  background: url("../images/bg20.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .carousel__slide:nth-child(3) {
-  background: url("images/bg21.jpg");
+  background: url("../images/bg21.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .carousel__slide:nth-child(4) {
-  background: url("images/bg22.jpg");
+  background: url("../images/bg22.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -511,7 +511,7 @@ footer .contact-bottom-border {
 }
 .tbg {
   content: "";
-  background: url("images/bg17.jpg");
+  background: url("../images/bg17.jpg");
   background-repeat: no-repeat;
   position: absolute;
   width: 100%;
@@ -527,27 +527,27 @@ footer {
   position: relative;
 }
 .i1 {
-  background: url("images/bg31.jpg");
+  background: url("../images/bg31.jpg");
   background-size: cover;
 }
 .i2 {
-  background: url("images/bg29.jpg");
+  background: url("../images/bg29.jpg");
   background-size: cover;
 }
 .i3 {
-  background: url("images/bg25.jpg");
+  background: url("../images/bg25.jpg");
   background-size: cover;
 }
 .i4 {
-  background: url("images/bg30.jpg");
+  background: url("../images/bg30.jpg");
   background-size: cover;
 }
 .i5 {
-  background: url("images/bg27.jpg");
+  background: url("../images/bg27.jpg");
   background-size: cover;
 }
 .i6 {
-  background: url("images/bg28.jpg_fit=scale");
+  background: url("../images/bg28.jpg_fit=scale");
   background-size: cover;
 }
 
@@ -622,15 +622,15 @@ footer {
   width: 40%;
 }
 .verna {
-  background-image: url("images/bg33.jpeg");
+  background-image: url("../images/bg33.jpeg");
   background-size: cover;
 }
 .camelia {
-  background-image: url("images/bg33.jpg");
+  background-image: url("../images/bg33.jpg");
   background-size: cover;
 }
 .grandtour {
-  background-image: url("images/bg32.png");
+  background-image: url("../images/bg32.png");
   background-size: cover;
 }
 @media (min-width: 1400px) {
